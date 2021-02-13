@@ -1,0 +1,40 @@
+.container {
+    width: 940px;
+    margin: auto;
+    background: #ffcc00;
+    padding: 30px 42px 0px 42px;
+}
+
+.header {
+    width: 940px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .logo img {
+        height: 40px;
+    }
+    ul {
+        display: flex;
+        li {
+            list-style: none;
+            padding-left: 50px;
+        }
+    }
+}
+
+.main {
+    display: flex;
+    width: 620px;
+}
+
+.sectionRight {
+    .item {
+        width: 300px;
+        .txt {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
