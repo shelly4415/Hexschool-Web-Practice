@@ -23,6 +23,9 @@ $lightGreen:#EAF0ED;
             list-style: none;
             padding-left: 50px;
             font-size: 16px;
+            font-family: "PingFang TC", serif;
+            color: $darkGreen;
+            font-weight: bold;
         }
     }
 }
@@ -36,20 +39,43 @@ $lightGreen:#EAF0ED;
     display: flex;
     justify-content: space-between;
     .sectionLeft {
-        ul {
+        width: 300px;
+        font-family: 'Noto Sans TC', sans-serif;
+        p {
+            // 把p段落置中的語法, 太好用啦!!!!
+            text-align: center;
+            padding: 16px 102px;
+            background-color: $darkGreen;
+            color: $lightGreen;
+            margin: 0;
             font-size: 24px;
-            line-height: 40px;
+            height: 65px;
+            // line-height: 0;
+            margin: 0;
+        }
+        ul {
+            text-align: center;
             list-style: none;
-            color: $darkGreen;
+            margin: 0;
+            padding: 0;
+            li {
+                font-size: 24px;
+                height: 65px;
+                color: $darkGreen;
+                padding: 16px 64px;
+                &:hover {
+                    background-color: $lightGreen;
+                }
+            }
         }
     }
     .sectionRight {
-        width: 640px;
+        width: 620px;
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         .item {
             width: 300px;
-            margin-left: 20px;
             margin-bottom: 20px;
             position: relative;
             .tag {
@@ -59,6 +85,9 @@ $lightGreen:#EAF0ED;
                 padding: 10px;
                 background-color: $darkGreen;
                 color: white;
+                font-family: "PingFang TC", serif;
+                font-size: 16px;
+                letter-spacing: 8px;
             }
             .myList {
                 position: absolute;
@@ -73,17 +102,50 @@ $lightGreen:#EAF0ED;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                font-size: 20px;
+                position: relative;
                 margin: 0;
                 border: $lightGreen 0.5pt solid;
                 height: 56px;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 20px;
+                font-weight: lighter;
+                color: $darkGreen;
+                .priceBoder {
+                    position: absolute;
+                    border: $lightGreen 0.5pt solid;
+                    right: 0;
+                    top: 0;
+                    height: 56px;
+                    width: 127px;
+                }
             }
             .cart {
+                display: block;
                 background-color: $lightGreen;
                 padding: 16px 90px;
                 font-size: 24px;
                 margin: 0;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 24px;
+                color: $darkGreen;
+                font-weight: bold;
             }
         }
+    }
+}
+
+.page {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .btn {
+        width: 60px;
+        height: 60px;
+        border: $lightGreen 0.5pt solid;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 20px;
+        color: $darkGreen;
+        padding: 0;
+        margin: 0;
     }
 }
