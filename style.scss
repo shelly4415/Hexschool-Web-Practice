@@ -7,6 +7,11 @@ $lightGreen:#EAF0ED;
     align-items: center;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .container {
     width: 940px;
     margin: auto;
@@ -210,10 +215,11 @@ $lightGreen:#EAF0ED;
         }
     }
     .footer {
-        padding: 30px 122px;
+        padding: 40px 122px;
         background-color: $lightGreen;
         .bigBox {
             @include display(space-between);
+            margin-bottom: 20px;
             .FInfo {
                 display: flex;
                 flex-direction: column;
@@ -247,6 +253,7 @@ $lightGreen:#EAF0ED;
             ul {
                 list-style: none;
                 padding: 0;
+                margin: 0;
                 li {
                     width: 32px;
                     padding-right: 8px;
@@ -256,6 +263,7 @@ $lightGreen:#EAF0ED;
             p {
                 font-size: 16px;
                 color: $darkGreen;
+                margin: 0;
             }
         }
     }

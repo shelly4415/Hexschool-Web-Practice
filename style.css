@@ -1,3 +1,8 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .container {
   width: 940px;
   margin: auto;
@@ -279,7 +284,7 @@
 }
 
 .container .footer {
-  padding: 30px 122px;
+  padding: 40px 122px;
   background-color: #EAF0ED;
 }
 
@@ -293,6 +298,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
 }
 
 .container .footer .bigBox .FInfo {
@@ -346,6 +352,7 @@
 .container .footer .smallBox ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .container .footer .smallBox ul li {
@@ -357,5 +364,6 @@
 .container .footer .smallBox p {
   font-size: 16px;
   color: #3F5D45;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
