@@ -1,18 +1,23 @@
 $darkGreen:#3F5D45;
 $lightGreen:#EAF0ED;
+// flex設定套用群組設定
+@mixin display($parameter1) {
+    display: flex;
+    justify-content: $parameter1;
+    align-items: center;
+}
+
 .container {
     width: 940px;
     margin: auto;
-    // background: #ffcc00;
     padding: 30px 42px 0px 42px;
 }
 
 .header {
     width: 940px;
     height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // 引用Scss自定義變數
+    @include display(space-between);
     margin-bottom: 30px;
     .logo img {
         height: 40px;
@@ -44,13 +49,10 @@ $lightGreen:#EAF0ED;
         p {
             // 把p段落置中的語法, 太好用啦!!!!
             text-align: center;
-            padding: 16px 102px;
             background-color: $darkGreen;
             color: $lightGreen;
-            margin: 0;
             font-size: 24px;
-            height: 65px;
-            // line-height: 0;
+            padding: 16px 0px;
             margin: 0;
         }
         ul {
@@ -59,12 +61,17 @@ $lightGreen:#EAF0ED;
             margin: 0;
             padding: 0;
             li {
-                font-size: 24px;
-                height: 65px;
-                color: $darkGreen;
-                padding: 16px 64px;
-                &:hover {
-                    background-color: $lightGreen;
+                a {
+                    // 讓a > inline 變成 block 整塊都可點及
+                    display: block;
+                    font-size: 24px;
+                    line-height: 40px;
+                    color: $darkGreen;
+                    padding: 16px 0px;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: $lightGreen;
+                    }
                 }
             }
         }
@@ -74,11 +81,13 @@ $lightGreen:#EAF0ED;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        margin-bottom: 20px;
         .item {
             width: 300px;
             margin-bottom: 20px;
             position: relative;
             .tag {
+                // txt轉直式
                 writing-mode: vertical-rl;
                 position: absolute;
                 left: 20px;
@@ -99,9 +108,7 @@ $lightGreen:#EAF0ED;
                 display: block;
             }
             .txt {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
+                @include display(space-around);
                 position: relative;
                 margin: 0;
                 border: $lightGreen 0.5pt solid;
@@ -134,18 +141,122 @@ $lightGreen:#EAF0ED;
     }
 }
 
-.page {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    .btn {
-        width: 60px;
-        height: 60px;
-        border: $lightGreen 0.5pt solid;
-        font-family: 'Noto Sans TC', sans-serif;
-        font-size: 20px;
-        color: $darkGreen;
-        padding: 0;
-        margin: 0;
+.container {
+    .page {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 60px;
+        .btn {
+            @include display(center);
+            width: 60px;
+            height: 60px;
+            border: $lightGreen 1pt solid;
+            p {
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 20px;
+                color: $darkGreen;
+            }
+        }
+    }
+    .UperFooter {
+        @include display(space-between);
+        background-color: $darkGreen;
+        padding: 30px 122px;
+        .mail {
+            display: flex;
+            img {
+                width: 40px;
+                display: block;
+            }
+            p {
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 24px;
+                color: $lightGreen;
+                padding: 0px 20px;
+            }
+        }
+        .send {
+            @include display(flex-end);
+            height: 56px;
+            background-color: $lightGreen;
+            .mailLogo2 {
+                position: relative;
+                width: 56px;
+                height: 56px;
+                .mailLogo {
+                    position: absolute;
+                    // 用傳統方法定位圖片
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                }
+            }
+            input {
+                border: none;
+                background-color: $lightGreen;
+                width: 200px;
+                height: 56px;
+                font-size: 20px;
+                outline: none;
+                padding: 0;
+            }
+            button {
+                // 去除btn、input預設邊框用border: none;
+                border: none;
+                background-color: #FFE180;
+                padding: 14.5px 20px;
+                margin: 0;
+            }
+        }
+    }
+    .footer {
+        padding: 30px 122px;
+        background-color: $lightGreen;
+        .bigBox {
+            @include display(space-between);
+            .FInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                img {
+                    width: 171px;
+                    padding-bottom: 60px;
+                }
+                .content {
+                    list-style: none;
+                    font-family: 'Noto Sans TC', sans-serif;
+                    font-size: 16px;
+                    color: $darkGreen;
+                    // list 點點消掉後會產生空白，用padding消掉
+                    padding: 0;
+                }
+            }
+            .FTxt {
+                // txt轉直式
+                writing-mode: vertical-rl;
+                font-family: 'Noto Sans TC', sans-serif;
+                font-size: 20px;
+                color: $darkGreen;
+                letter-spacing: 0.2rem;
+            }
+        }
+        .smallBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    width: 32px;
+                    padding-right: 8px;
+                    display: inline-block;
+                }
+            }
+            p {
+                font-size: 16px;
+                color: $darkGreen;
+            }
+        }
     }
 }

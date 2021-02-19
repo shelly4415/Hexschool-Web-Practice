@@ -59,12 +59,10 @@
 
 .main .sectionLeft p {
   text-align: center;
-  padding: 16px 102px;
   background-color: #3F5D45;
   color: #EAF0ED;
-  margin: 0;
   font-size: 24px;
-  height: 65px;
+  padding: 16px 0px;
   margin: 0;
 }
 
@@ -75,14 +73,16 @@
   padding: 0;
 }
 
-.main .sectionLeft ul li {
+.main .sectionLeft ul li a {
+  display: block;
   font-size: 24px;
-  height: 65px;
+  line-height: 40px;
   color: #3F5D45;
-  padding: 16px 64px;
+  padding: 16px 0px;
+  text-decoration: none;
 }
 
-.main .sectionLeft ul li:hover {
+.main .sectionLeft ul li a:hover {
   background-color: #EAF0ED;
 }
 
@@ -96,6 +96,7 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .main .sectionRight .item {
@@ -169,7 +170,70 @@
   font-weight: bold;
 }
 
-.page {
+.container .page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 60px;
+}
+
+.container .page .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 60px;
+  border: #EAF0ED 1pt solid;
+}
+
+.container .page .btn p {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 20px;
+  color: #3F5D45;
+}
+
+.container .UperFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3F5D45;
+  padding: 30px 122px;
+}
+
+.container .UperFooter .mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .UperFooter .mail img {
+  width: 40px;
+  display: block;
+}
+
+.container .UperFooter .mail p {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 24px;
+  color: #EAF0ED;
+  padding: 0px 20px;
+}
+
+.container .UperFooter .send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,16 +243,119 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 56px;
+  background-color: #EAF0ED;
 }
 
-.page .btn {
-  width: 60px;
-  height: 60px;
-  border: #EAF0ED 0.5pt solid;
+.container .UperFooter .send .mailLogo2 {
+  position: relative;
+  width: 56px;
+  height: 56px;
+}
+
+.container .UperFooter .send .mailLogo2 .mailLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.container .UperFooter .send input {
+  border: none;
+  background-color: #EAF0ED;
+  width: 200px;
+  height: 56px;
+  font-size: 20px;
+  outline: none;
+  padding: 0;
+}
+
+.container .UperFooter .send button {
+  border: none;
+  background-color: #FFE180;
+  padding: 14.5px 20px;
+  margin: 0;
+}
+
+.container .footer {
+  padding: 30px 122px;
+  background-color: #EAF0ED;
+}
+
+.container .footer .bigBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .footer .bigBox .FInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .footer .bigBox .FInfo img {
+  width: 171px;
+  padding-bottom: 60px;
+}
+
+.container .footer .bigBox .FInfo .content {
+  list-style: none;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 16px;
+  color: #3F5D45;
+  padding: 0;
+}
+
+.container .footer .bigBox .FTxt {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 20px;
   color: #3F5D45;
+  letter-spacing: 0.2rem;
+}
+
+.container .footer .smallBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.container .footer .smallBox ul {
+  list-style: none;
   padding: 0;
-  margin: 0;
+}
+
+.container .footer .smallBox ul li {
+  width: 32px;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+.container .footer .smallBox p {
+  font-size: 16px;
+  color: #3F5D45;
 }
 /*# sourceMappingURL=style.css.map */
