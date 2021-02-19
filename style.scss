@@ -1,5 +1,8 @@
 $darkGreen:#3F5D45;
 $lightGreen:#EAF0ED;
+$font-lg:24px;
+$font-mid:20px;
+$font-sm:16px;
 // flex設定套用群組設定
 @mixin display($parameter1) {
     display: flex;
@@ -32,7 +35,7 @@ body {
         li {
             list-style: none;
             padding-left: 50px;
-            font-size: 16px;
+            font-size: $font-sm;
             font-family: "PingFang TC", serif;
             color: $darkGreen;
             font-weight: bold;
@@ -56,7 +59,7 @@ body {
             text-align: center;
             background-color: $darkGreen;
             color: $lightGreen;
-            font-size: 24px;
+            font-size: $font-lg;
             padding: 16px 0px;
             margin: 0;
         }
@@ -69,7 +72,7 @@ body {
                 a {
                     // 讓a > inline 變成 block 整塊都可點及
                     display: block;
-                    font-size: 24px;
+                    font-size: $font-lg;
                     line-height: 40px;
                     color: $darkGreen;
                     padding: 16px 0px;
@@ -100,7 +103,7 @@ body {
                 background-color: $darkGreen;
                 color: white;
                 font-family: "PingFang TC", serif;
-                font-size: 16px;
+                font-size: $font-sm;
                 letter-spacing: 8px;
             }
             .myList {
@@ -119,7 +122,7 @@ body {
                 border: $lightGreen 0.5pt solid;
                 height: 56px;
                 font-family: 'Noto Sans TC', sans-serif;
-                font-size: 20px;
+                font-size: $font-mid;
                 font-weight: lighter;
                 color: $darkGreen;
                 .priceBoder {
@@ -135,10 +138,9 @@ body {
                 display: block;
                 background-color: $lightGreen;
                 padding: 16px 90px;
-                font-size: 24px;
+                font-size: $font-lg;
                 margin: 0;
                 font-family: 'Noto Sans TC', sans-serif;
-                font-size: 24px;
                 color: $darkGreen;
                 font-weight: bold;
             }
@@ -158,7 +160,7 @@ body {
             border: $lightGreen 1pt solid;
             p {
                 font-family: 'Noto Sans TC', sans-serif;
-                font-size: 20px;
+                font-size: $font-mid;
                 color: $darkGreen;
             }
         }
@@ -175,7 +177,7 @@ body {
             }
             p {
                 font-family: 'Noto Sans TC', sans-serif;
-                font-size: 24px;
+                font-size: $font-lg;
                 color: $lightGreen;
                 padding: 0px 20px;
             }
@@ -201,7 +203,7 @@ body {
                 background-color: $lightGreen;
                 width: 200px;
                 height: 56px;
-                font-size: 20px;
+                font-size: $font-mid;
                 outline: none;
                 padding: 0;
             }
@@ -231,7 +233,7 @@ body {
                 .content {
                     list-style: none;
                     font-family: 'Noto Sans TC', sans-serif;
-                    font-size: 16px;
+                    font-size: $font-sm;
                     color: $darkGreen;
                     // list 點點消掉後會產生空白，用padding消掉
                     padding: 0;
@@ -241,7 +243,7 @@ body {
                 // txt轉直式
                 writing-mode: vertical-rl;
                 font-family: 'Noto Sans TC', sans-serif;
-                font-size: 20px;
+                font-size: $font-mid;
                 color: $darkGreen;
                 letter-spacing: 0.2rem;
             }
@@ -261,7 +263,7 @@ body {
                 }
             }
             p {
-                font-size: 16px;
+                font-size: $font-sm;
                 color: $darkGreen;
                 margin: 0;
             }
