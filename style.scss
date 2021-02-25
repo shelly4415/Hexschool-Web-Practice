@@ -16,143 +16,153 @@ body {
 }
 
 .container {
-    width: 940px;
-    margin: auto;
-    padding: 30px 42px 0px 42px;
-}
-
-.header {
-    width: 940px;
-    height: 40px;
-    // 引用Scss自定義變數
-    @include display(space-between);
-    margin-bottom: 30px;
-    .logo img {
+    // width: 940px;
+    // max-width RWD 寬度設定
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 1.8rem 2.6rem 0rem 2.6rem;
+    .header {
         height: 40px;
-    }
-    ul {
-        display: flex;
-        li {
-            list-style: none;
-            padding-left: 50px;
-            font-size: $font-sm;
-            font-family: "PingFang TC", serif;
-            color: $darkGreen;
-            font-weight: bold;
-        }
-    }
-}
-
-.banner {
-    margin-bottom: 60px;
-}
-
-.main {
-    width: 940px;
-    display: flex;
-    justify-content: space-between;
-    .sectionLeft {
-        width: 300px;
-        font-family: 'Noto Sans TC', sans-serif;
-        p {
-            // 把p段落置中的語法, 太好用啦!!!!
-            text-align: center;
-            background-color: $darkGreen;
-            color: $lightGreen;
-            font-size: $font-lg;
-            padding: 16px 0px;
-            margin: 0;
+        // 引用Scss自定義變數
+        @include display(space-between);
+        margin-bottom: 30px;
+        .logo {
+            width: 30%;
         }
         ul {
-            text-align: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
+            display: flex;
             li {
-                a {
-                    // 讓a > inline 變成 block 整塊都可點及
-                    display: block;
-                    font-size: $font-lg;
-                    line-height: 40px;
-                    color: $darkGreen;
-                    padding: 16px 0px;
-                    text-decoration: none;
-                    &:hover {
-                        background-color: $lightGreen;
-                    }
-                }
-            }
-        }
-    }
-    .sectionRight {
-        width: 620px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-        .item {
-            width: 300px;
-            margin-bottom: 20px;
-            position: relative;
-            .tag {
-                // txt轉直式
-                writing-mode: vertical-rl;
-                position: absolute;
-                left: 20px;
-                padding: 10px;
-                background-color: $darkGreen;
-                color: white;
-                font-family: "PingFang TC", serif;
+                list-style: none;
+                padding-left: 50px;
                 font-size: $font-sm;
-                letter-spacing: 8px;
-            }
-            .myList {
-                position: absolute;
-                top: 20px;
-                right: 19px;
-                width: 20px;
-            }
-            img {
-                display: block;
-            }
-            .txt {
-                @include display(space-around);
-                position: relative;
-                margin: 0;
-                border: $lightGreen 0.5pt solid;
-                height: 56px;
-                font-family: 'Noto Sans TC', sans-serif;
-                font-size: $font-mid;
-                font-weight: lighter;
-                color: $darkGreen;
-                .priceBoder {
-                    position: absolute;
-                    border: $lightGreen 0.5pt solid;
-                    right: 0;
-                    top: 0;
-                    height: 56px;
-                    width: 127px;
-                }
-            }
-            .cart {
-                display: block;
-                background-color: $lightGreen;
-                padding: 16px 90px;
-                font-size: $font-lg;
-                margin: 0;
-                font-family: 'Noto Sans TC', sans-serif;
+                font-family: "PingFang TC", serif;
                 color: $darkGreen;
                 font-weight: bold;
             }
         }
     }
-}
-
-.container {
+    .banner {
+        margin-bottom: 3rem;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    .main {
+        max-width: 940px;
+        display: flex;
+        justify-content: space-between;
+        .sectionLeft {
+            // 取消寫死寬度，改為 % 形成自適應效果
+            width: 33%;
+            font-family: 'Noto Sans TC', sans-serif;
+            p {
+                // 把p段落置中的語法, 太好用啦!!!!
+                text-align: center;
+                background-color: $darkGreen;
+                color: $lightGreen;
+                font-size: $font-lg;
+                padding: 16px 0px;
+                margin: 0;
+            }
+            ul {
+                text-align: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    a {
+                        // 讓a > inline 變成 block 整塊都可點及
+                        display: block;
+                        font-size: $font-lg;
+                        line-height: 40px;
+                        color: $darkGreen;
+                        padding: 16px 0px;
+                        text-decoration: none;
+                        &:hover {
+                            background-color: $lightGreen;
+                        }
+                    }
+                }
+            }
+        }
+        .sectionRight {
+            // width: 620px;
+            // 取消寫死寬度，改為 % 形成自適應效果
+            width: 66%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            .item {
+                width: 48%;
+                margin-left: 1%;
+                margin-bottom: 3%;
+                position: relative;
+                .tag {
+                    // txt轉直式
+                    writing-mode: vertical-rl;
+                    position: absolute;
+                    left: 1.5rem;
+                    padding: 0.6rem;
+                    background-color: $darkGreen;
+                    color: white;
+                    font-family: "PingFang TC", serif;
+                    font-size: $font-sm;
+                    letter-spacing: 0.5rem;
+                }
+                .myList {
+                    position: absolute;
+                    top: 20px;
+                    right: 19px;
+                    width: 20px;
+                }
+                img {
+                    // 讓圖片自適應的語法 max-width: 100%;
+                    max-width: 100%;
+                    // height: auto;
+                    // 移除圖片下方的空白
+                    display: block;
+                }
+                .txt {
+                    @include display(space-around);
+                    // max-width: 100%;
+                    position: relative;
+                    margin: 0;
+                    border: $lightGreen 0.5pt solid;
+                    height: 56px;
+                    font-family: 'Noto Sans TC', sans-serif;
+                    font-size: $font-mid;
+                    font-weight: lighter;
+                    color: $darkGreen;
+                    // .priceBoder {
+                    //     position: absolute;
+                    //     border: $lightGreen 0.5pt solid;
+                    //     right: 0;
+                    //     top: 0;
+                    //     height: 56px;
+                    //     width: 127px;
+                    // }
+                }
+                .cart {
+                    display: block;
+                    background-color: $lightGreen;
+                    padding: 16px;
+                    text-align: center;
+                    font-size: $font-lg;
+                    margin: 0;
+                    font-family: 'Noto Sans TC', sans-serif;
+                    color: $darkGreen;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
     .page {
         display: flex;
         justify-content: flex-end;
-        margin-bottom: 60px;
+        margin-bottom: 3rem;
         .btn {
             @include display(center);
             width: 60px;
@@ -217,7 +227,7 @@ body {
         }
     }
     .footer {
-        padding: 40px 122px;
+        padding: 2rem 6rem;
         background-color: $lightGreen;
         .bigBox {
             @include display(space-between);
@@ -266,6 +276,57 @@ body {
                 font-size: $font-sm;
                 color: $darkGreen;
                 margin: 0;
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .container {
+        padding: 30px 0 0 0;
+        .banner {
+            margin: 0;
+        }
+        .main {
+            flex-direction: column;
+            .sectionLeft {
+                width: 100%;
+                margin: 0 0 8% 0;
+            }
+            .sectionRight {
+                flex-direction: column;
+                width: 100%;
+                margin: 0;
+                .item {
+                    width: 86%;
+                    margin: 0 8% 8% 8%;
+                }
+            }
+        }
+        .page {
+            justify-content: center;
+        }
+        .UperFooter {
+            flex-direction: column;
+            padding: 0;
+            .mail {
+                p {
+                    margin: 1.5rem 0;
+                }
+            }
+            .send {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .footer {
+            .bigBox {
+                .FTxt {
+                    display: none;
+                }
+            }
+            .smallBox {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     }

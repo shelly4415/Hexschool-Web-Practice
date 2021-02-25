@@ -1,0 +1,8 @@
+1. max-width: OOOpx
+   max-width = 可自適應縮減的語法
+
+2. 內部建構改成 %，不寫死比例
+   注意 若要流padding margin %數要算好
+
+3. text-align: center;  文字水平置中   
+    可以只設定padding高度, 寬度自適應時依舊保持置中
