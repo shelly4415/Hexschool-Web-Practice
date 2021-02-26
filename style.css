@@ -23,6 +23,10 @@ body {
   margin-bottom: 30px;
 }
 
+.container .header .menu {
+  display: none;
+}
+
 .container .header .logo {
   width: 30%;
 }
@@ -40,6 +44,10 @@ body {
   font-family: "PingFang TC", serif;
   color: #3F5D45;
   font-weight: bold;
+}
+
+.container .header .cart {
+  display: none;
 }
 
 .container .banner {
@@ -378,6 +386,18 @@ body {
   .container {
     padding: 30px 0 0 0;
   }
+  .container .header {
+    margin: 0px 30px 30px 30px;
+  }
+  .container .header .menu {
+    display: block;
+  }
+  .container .header ul {
+    display: none;
+  }
+  .container .header .cart {
+    display: block;
+  }
   .container .banner {
     margin: 0;
   }
@@ -415,6 +435,18 @@ body {
   .container .main .sectionRight .item img {
     width: 100%;
   }
+  .container .main .sectionRight .item .tag {
+    left: 1.7rem;
+    padding: 0.8rem;
+    font-size: 20px;
+    letter-spacing: 0.8rem;
+  }
+  .container .main .sectionRight .item .myList {
+    position: absolute;
+    top: 20px;
+    right: 19px;
+    width: 20px;
+  }
   .container .page {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -450,6 +482,9 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  .container .footer .smallBox img {
+    padding-bottom: 23px;
   }
 }
 /*# sourceMappingURL=style.css.map */
