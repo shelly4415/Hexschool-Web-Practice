@@ -199,9 +199,18 @@ body {
 }
 
 .container .page .btn p {
+  display: block;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 20px;
   color: #3F5D45;
+}
+
+.container .page .btn p:focus {
+  color: #EAF0ED;
+}
+
+.container .page .btn:hover {
+  background-color: #3F5D45;
 }
 
 .container .UperFooter {
@@ -382,6 +391,12 @@ body {
     width: 100%;
     margin: 0 0 8% 0;
   }
+  .container .main .sectionLeft p {
+    font-size: 30px;
+  }
+  .container .main .sectionLeft ul li a {
+    font-size: 30px;
+  }
   .container .main .sectionRight {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -391,8 +406,14 @@ body {
     margin: 0;
   }
   .container .main .sectionRight .item {
-    width: 86%;
-    margin: 0 8% 8% 8%;
+    width: 80%;
+    margin: 0 10% 10% 10%;
+  }
+  .container .main .sectionRight .item .txt p {
+    font-size: 24px;
+  }
+  .container .main .sectionRight .item img {
+    width: 100%;
   }
   .container .page {
     -webkit-box-pack: center;
@@ -411,6 +432,12 @@ body {
   }
   .container .UperFooter .send {
     margin-bottom: 1.5rem;
+  }
+  .container .footer {
+    padding-top: 3rem;
+  }
+  .container .footer .bigBox .FInfo img {
+    padding-bottom: 30px;
   }
   .container .footer .bigBox .FTxt {
     display: none;

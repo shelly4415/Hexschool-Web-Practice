@@ -168,10 +168,28 @@ body {
             width: 60px;
             height: 60px;
             border: $lightGreen 1pt solid;
+            // a {
+            //     display: block;
+            //     padding: 30px;
+            //     font-family: 'Noto Sans TC', sans-serif;
+            //     font-size: $font-mid;
+            //     color: $darkGreen;
+            //     text-decoration: none;
+            //     &:focus {
+            //         color: $lightGreen;
+            //     }
+            // }
             p {
+                display: block;
                 font-family: 'Noto Sans TC', sans-serif;
                 font-size: $font-mid;
                 color: $darkGreen;
+                &:focus {
+                    color: $lightGreen;
+                }
+            }
+            &:hover {
+                background-color: $darkGreen;
             }
         }
     }
@@ -292,14 +310,34 @@ body {
             .sectionLeft {
                 width: 100%;
                 margin: 0 0 8% 0;
+                p {
+                    font-size: 30px;
+                }
+                ul {
+                    li {
+                        a {
+                            font-size: 30px;
+                        }
+                    }
+                }
             }
             .sectionRight {
                 flex-direction: column;
                 width: 100%;
                 margin: 0;
                 .item {
-                    width: 86%;
-                    margin: 0 8% 8% 8%;
+                    width: 80%;
+                    margin: 0 10% 10% 10%;
+                    .txt {
+                        p {
+                            font-size: $font-lg;
+                        }
+                    }
+                    img {
+                        // 發現用 max-width 圖片會固定滿版高度
+                        // 使的圖片不夠大的情況下對於 RWD 的80%寬度無法橫向延伸滿足,形成空白, 改為 width: 100%;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -319,7 +357,13 @@ body {
             }
         }
         .footer {
+            padding-top: 3rem;
             .bigBox {
+                .FInfo {
+                    img {
+                        padding-bottom: 30px;
+                    }
+                }
                 .FTxt {
                     display: none;
                 }
